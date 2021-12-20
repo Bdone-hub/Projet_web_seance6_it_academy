@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+    
+}
+
+h1,h2,h3{
+    color: #1f3858;
+}
+
+button{
+    color: rgb(8, 119, 8);
+    background-color: rgb(216, 214, 214);
+    border: rgb(216, 214, 214);
+    border-radius: 5px;
+    font-size:medium;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+} 
+
+th{
+    border: 1px solid rgb(216, 214, 214);
+}
+
+html{
+    font-family: 'Trebuchet MS';
+}
+
+#inscription,#supprimer{
+    height: 30px;
+    font-size: small;
+    float: left;
+}
