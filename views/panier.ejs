@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>IT Academy</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <h1>IT Academy</h1>
+    <h2>Panier</h2>
+    <div id="form">
+        <% if (list.length>0) { %>
+            <form id="childform" action="/finaliser"><button>Finaliser l'inscription</button></form>
+        <% } else{%>
+            <form id="childform" action=""><button id="gris">Finaliser l'inscription</button></form>
+        
+        <%}%>
+    <form id="childform" action="/"><button>Retourner au catalogue de formations</button></form>
+    </div>
+
+    <div>
+        <% if (list.length>0) { %>
+        <table>
+            <tbody>
+                <tr>
+                    <th>id</th>
+                    <th>nom</th>
+                    <th>Prix</th>
+                    <th>Date début</th>
+                    <th>Date fin</th>
+                    <th></th>
+                </tr>
+                <% for( let index=0; index < list.length; index++ ) { %>
+                    <tr>
+                        <th>
+                            <%=list[index].idformation%>
+                        </th>
+                        <th>
+                            <%=list[index].nomformation%>
+                        </th>
+                        <th>
+                            <%=list[index].prix%>
+                        </th>
+                        <th>
+                            <%= list[index].debut%>
+                        </th>
+                        <th>
+                            <%=list[index].fin%>
+                        </th>
+                        <th>
+                            <form action="/removepanier/<%=list[index].idformation %> " method="get">
+                                <button id="supprimer" type="submit">supprimer</button>
+                            </form>
+                        </th>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <div>Votre panier est vide</div>
+        <% } %>
+    </div>
+</html>

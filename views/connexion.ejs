@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>IT Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <h1>IT Academy</h1>
+    <h3>Entrer votre pseudo</h3>
+    <% if (state == 'connexion') { %>
+        <form action="/login" method="post" class= "form">     <% //1ere connection  %> 
+    <% } else { %>
+        <form action="/login2" method="post" class= "form">    <% //neme connection  %> 
+    <% } %> 
+        <input type="text" name="pseudo" placeholder="pseudo">
+        <button type="submit">connexion</button>
+    </form>   
+
+</body>
+
+
+</html>
